@@ -1,0 +1,127 @@
+{
+  "company": {
+    "name": "Tudo bookings",
+    "logo": "/assets/images/logo.png"
+  },
+  "navigation": [],
+  "callToAction": {
+    "text": "Join Waiting List",
+    "href": "/"
+  },
+  "mainHero": {
+    "title": "Optimise your schedule and expand your clientele with ",
+    "subtitle": "Tudo",
+    "description": "Take control of your schedule with automated alerts and attract new clients easily. Simplify your booking process and grow your business effortlessly. Join Tudo and grow your business today !",
+    "img": "/assets/images/young-black-four-women-hugging-and-laughing-at-cam-2023-11-27-05-37-08-utc.jpg",
+    "primaryAction": {
+      "text": "Join Us",
+      "href": "#"
+    },
+    "secondaryAction": {
+      "text": "Email us",
+      "href": "coutinhosean1@gmail.com?subject=I want to join"
+    }
+  },
+  "product": {
+    "title": "Tudo Booking Platform",
+    "items": [
+      {
+        "title": "A seamless solutions for connecting African products and services in Poland!",
+        "description": "In Poland, finding beauty and makeup solutions tailored to your unique needs can be challenging. That's where we come in. Our platform bridges the gap by connecting you to native African beauty services and products, ensuring you get the best care and expertise. Discover a world of authentic African beauty solutions right at your fingertips. Join us and elevate your beauty experience with the richness of African traditions and innovations.",
+        "img": "/assets/images/hero.jpg"
+      }
+    ]
+  },
+  "features": {
+    "title": "Profile Creation",
+    "description": " Hairdressers and barbers create a profile showcasing their skills, specialties, and experience. They can upload photos of their work to display their styles and previous haircuts.",
+    "title2": "Availability Management",
+    "description2": "Professionals can set their availability, specifying the days and times they are open for appointments. This feature helps them manage their schedule efficiently, ensuring they are not disturbed during personal or busy times.",
+    "title3": "Appointment Booking",
+    "description3": " Clients can book appointments directly through the app without needing to call or message the professional. Notifications of new bookings are sent, and the schedule is updated automatically.",
+    "title4": "Communication",
+    "description4": "There is an in-app chat feature allowing clients and professionals to discuss specific requirements or ask questions before the appointment. This helps in clarifying expectations and reducing the chances of miscommunic",
+    "title5": "Visibility and Growth",
+    "description5": " By being part of the platform, hairdressers and barbers increase their visibility beyond their immediate network. The app helps in attracting new clients who might be visiting or living in the area and are searching for quality hair services."
+  },
+  "clients": {
+    "title": "Search and Discovery",
+    "description": "Users can search for hairdressers and barbers based on location, availability, and specific services they need. They can view profiles, portfolios, and reviews to find the best match for their requirements.",
+    "title2": "Convenient Booking",
+    "description2": "The app allows users to book appointments seamlessly without the need to call or send messages. They can see available slots and choose a time that fits their schedule.",
+    "title3": "Real-Time Updates",
+    "description3": "Clients receive instant notifications about their booking status, including confirmations and reminders. This helps them stay organized and ensures they do not miss their appointments.",
+    "title4": "Direct Communication",
+    "description4": "The in-app chat feature enables clients to communicate directly with their chosen professional. They can discuss specific needs or preferences, ensuring they get the exact service they are looking for.",
+    "title5": "Access to Diverse Styles",
+    "description5": "Users have access to a wide range of styles and services that they might not find locally. This is particularly beneficial in areas with limited availability of specialized hair services."
+  },
+  "pricing": {
+    "title": "Pricing",
+    "items": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "priceDetails": "for one user",
+        "features": [
+          "1 user",
+          "Basic Support",
+          "1 GB of storage",
+          "Email support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "price": "$15",
+        "priceDetails": "per user",
+
+        "features": [
+          "5 users",
+          "Priority Support",
+          "10 GB of storage",
+          "Phone and Email support"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$29",
+        "priceDetails": "per user",
+        "features": [
+          "50 users",
+          "24/7 Support",
+          "100 GB of storage",
+          "Phone and Email support"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "sections": [
+      {
+        "name": "Something",
+        "href": "#",
+        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+      },
+      {
+        "name": "Something",
+        "href": "#",
+        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+      },
+      {
+        "name": "Something",
+        "href": "#",
+        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+      },
+      {
+        "name": "Something",
+        "href": "#",
+        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+      }
+    ],
+    "socialMedia": {
+      "github": "https://github.com/issaafalkattan",
+      "twitter": "https://twitter.com/issaafkattan",
+      "linkedin": "https://www.linkedin.com/in/issaaf-kattan/"
+    }
+  }
+}
