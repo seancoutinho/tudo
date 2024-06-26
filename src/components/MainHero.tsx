@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { supabase } from "../supabaseClient";
 import config from "../config/index.json";
 import WaitlistCounter from "./WaitlistCounter";
 
@@ -7,28 +8,28 @@ const MainHero = () => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [subscribed, setSubscribed] = useState(false);
+  const [role, setRole] = useState("");
+  const [service, setService] = useState("");
 
-  const handleJoinClick = () => {
+  const handleJoinClick = async () => {
     setIsLoading(true);
-
-    fetch("http://localhost:5000/api/subscribe", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success", data); // handle the response data
-        setIsLoading(false);
-        setSubscribed(true); // reset the loading state
-      })
-      .catch((error) => {
-        console.error(error); // handle the error
-        setIsLoading(false);
-        setSubscribed(true);
-      });
+    try {
+      if (role === "Service Provider") {
+        const { error } = await supabase
+          .from("service_providers")
+          .insert([{ email, service }]);
+        if (error) throw error;
+      } else if (role === "Client") {
+        const { error } = await supabase
+          .from("clients")
+          .insert([{ email, type: role }]);
+        if (error) throw error;
+      }
+      setSubscribed(true);
+    } catch (error) {
+      console.error(error);
+    }
+    setIsLoading(false);
   };
 
   return (
@@ -63,20 +64,48 @@ const MainHero = () => {
                         }}></div>
                     </div>
 
-                    <form action="#" method="POST" className="relative">
+                    <form
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        handleJoinClick();
+                      }}
+                      className="relative">
                       <input
                         onChange={(e) => setEmail(e.target.value)}
                         type="email"
-                        name=""
-                        id=""
+                        name="email"
+                        id="email"
                         placeholder="Enter your email address"
                         className="block w-full px-5 py-6 text-base font-normal text-black placeholder-gray-600 bg-white border border-gray-300 rounded-xl focus:border-black focus:ring-1 focus:ring-black font-pj focus:outline-none"
                         required
                       />
 
-                      <div className="mt-4 sm:mt-0 sm:absolute sm:inset-y-0 sm:right-0 sm:flex sm:items-center sm:pr-3">
+                      <select
+                        onChange={(e) => setRole(e.target.value)}
+                        className="block w-full px-5 py-6 text-base font-normal text-black placeholder-gray-600 bg-white border border-gray-300 rounded-xl focus:border-black focus:ring-1 focus:ring-black font-pj focus:outline-none mt-4"
+                        required>
+                        <option value="">Select your role</option>
+                        <option value="Service Provider">
+                          Service Provider
+                        </option>
+                        <option value="Client">Client</option>
+                      </select>
+
+                      {role === "Service Provider" && (
+                        <input
+                          onChange={(e) => setService(e.target.value)}
+                          type="text"
+                          name="service"
+                          id="service"
+                          placeholder="Enter the service you offer"
+                          className="block w-full px-5 py-6 text-base font-normal text-black placeholder-gray-600 bg-white border border-gray-300 rounded-xl focus:border-black focus:ring-1 focus:ring-black font-pj focus:outline-none mt-4"
+                          required
+                        />
+                      )}
+
+                      <div className="mt-8 py-8 sm:mt-0 sm:flex sm:items-center sm:pr-3">
                         <button
-                          onClick={handleJoinClick}
+                          type="submit"
                           className="
                             inline-flex
                             items-center
