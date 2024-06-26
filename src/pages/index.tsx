@@ -48,7 +48,6 @@ const App = () => {
           <About />
         </>
       </LazyShow>
-      <Analytics />
     </div>
   );
 };
